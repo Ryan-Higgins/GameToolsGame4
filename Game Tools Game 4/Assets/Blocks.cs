@@ -43,12 +43,20 @@ public class Blocks : MonoBehaviour {
 	}
 
 	void ChangeBlock () {
-		if (Input.GetKeyDown (KeyCode.UpArrow)) {
-			myManager.count += 1;
+		if (Input.GetKeyDown (KeyCode.UpArrow) && myManager.count < 8) {
+				myManager.count += 1;
 		}
 
 		if (Input.GetKeyDown (KeyCode.DownArrow)) {
 			myManager.count -= 1;
+		}
+
+		if (myManager.count > 9) {
+			myManager.count -= 1;
+		}
+
+		if (myManager.count < 0) {
+			myManager.count += 1;
 		}
 	}
 
