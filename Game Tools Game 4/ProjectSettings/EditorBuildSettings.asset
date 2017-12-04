@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Game Tools Game 4.unity
+    guid: 945e94c422ba4ec4aa41b96747299dc1
+  - enabled: 1
+    path: Assets/ChangeTest.unity
+    guid: 2fbb4c1e2a80f5e4babf32924d38af0d
