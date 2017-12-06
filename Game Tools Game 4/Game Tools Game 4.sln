@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game Tools Game 4", "Assembly-CSharp.csproj", "{9F6D0E34-576C-62FD-7571-BAD8BD0811C4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game Tools Game 4", "Assembly-CSharp-Editor.csproj", "{9A552EA8-21F0-76B8-EF29-39100BCF5CBA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{9F6D0E34-576C-62FD-7571-BAD8BD0811C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F6D0E34-576C-62FD-7571-BAD8BD0811C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F6D0E34-576C-62FD-7571-BAD8BD0811C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A552EA8-21F0-76B8-EF29-39100BCF5CBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A552EA8-21F0-76B8-EF29-39100BCF5CBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A552EA8-21F0-76B8-EF29-39100BCF5CBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A552EA8-21F0-76B8-EF29-39100BCF5CBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
