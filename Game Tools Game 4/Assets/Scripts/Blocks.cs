@@ -7,11 +7,17 @@ public class Blocks : MonoBehaviour {
 	public Manager myManager;
 	public List<GameObject> myBlocks;
 	public GameObject currentBlock;
+	public Material myMat;
+	GameObject previousBlock;
 
 	// Use this for initialization
 	void Start () {
 		manager = GameObject.Find ("Manager");
 		myManager = manager.GetComponent<Manager> ();
+		currentBlock = myBlocks [myManager.count];
+		myMat = currentBlock.GetComponent<MeshRenderer> ().material;
+		currentBlock.GetComponent<MeshRenderer> ().material = currentBlock.GetComponent<MeshRenderer> ().materials [1];
+
 	}
 
 	void MovingBlocks () {
@@ -44,11 +50,22 @@ public class Blocks : MonoBehaviour {
 
 	void ChangeBlock () {
 		if (Input.GetKeyDown (KeyCode.UpArrow) && myManager.count < 8) {
-				myManager.count += 1;
+			previousBlock = currentBlock;	
+			previousBlock.GetComponent<MeshRenderer> ().material = myMat;
+			myManager.count += 1;
+			currentBlock = myBlocks [myManager.count];
+			myMat = currentBlock.GetComponent<MeshRenderer> ().material;
+			currentBlock.GetComponent<MeshRenderer> ().material = currentBlock.GetComponent<MeshRenderer> ().materials [1];
+
 		}
 
 		if (Input.GetKeyDown (KeyCode.DownArrow)) {
+			previousBlock = currentBlock;	
+			previousBlock.GetComponent<MeshRenderer> ().material=myMat;
 			myManager.count -= 1;
+			currentBlock = myBlocks [myManager.count];
+			myMat = currentBlock.GetComponent<MeshRenderer> ().material;
+			currentBlock.GetComponent<MeshRenderer> ().material = currentBlock.GetComponent<MeshRenderer> ().materials [1];
 		}
 
 		if (myManager.count > 9) {
@@ -63,7 +80,16 @@ public class Blocks : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		 {
-			currentBlock = myBlocks [myManager.count];
+			
+//			if (currentBlock != myBlocks [myManager.count]) {
+//				Debug.Log ("Works");
+//				for (int i = 0; i < myBlocks.Count; i++) {
+//					myBlocks [i].GetComponent<MeshRenderer>().material = myMat;
+//				}
+//			}
+
+
+
 		
 			MovingBlocks ();
 			ChangeBlock ();

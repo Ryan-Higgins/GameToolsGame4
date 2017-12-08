@@ -6,8 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Game Tools Game 4.unity
-    guid: 945e94c422ba4ec4aa41b96747299dc1
+    path: Assets/Scenes/Level 2.unity
+    guid: 6a99da1d529f26e48a861ded5134d6b7
   - enabled: 1
-    path: Assets/ChangeTest.unity
+    path: Assets/Scenes/Game Tools Game 4.unity
+    guid: 945e94c422ba4ec4aa41b96747299dc1
+  - enabled: 0
+    path: Assets/Scenes/ChangeTest.unity
     guid: 2fbb4c1e2a80f5e4babf32924d38af0d
